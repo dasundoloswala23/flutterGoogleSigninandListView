@@ -8,6 +8,8 @@ Unzip the zip file and open it in your IDE (Android Studio or VS Code). In the t
   * Used MVC Architecture 
   * Used reusable widget
   * Texts,colors,images declare in separate file
+  * Error Handling :
+       *  Because images were not found, an error was shown. If an image error occurs, display a placeholder image.
 
 
 ## Other Source,
