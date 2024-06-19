@@ -3,6 +3,7 @@ import 'package:flutterelegantmedia/utils/next_Screen.dart';
 
 import '../model/lisViewModel.dart';
 import '../screens/detailScreen.dart';
+import '../utils/config.dart';
 
 Widget buildPosts(List<Post> posts) {
   return ListView.builder(
@@ -25,7 +26,7 @@ Widget buildPosts(List<Post> posts) {
                 flex: 1,
                 child: Image.network(post.image?.large ?? '',
                     errorBuilder: (context, error, stackTrace) {
-                  return Image.asset('assets/placeholder.png');
+                  return Image.asset(Config.placeholder);
                 }),
               ),
               SizedBox(width: 10),

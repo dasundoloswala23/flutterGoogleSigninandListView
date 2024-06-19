@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
+import '../utils/config.dart';
+
 Widget viewOneDetails(post) {
   return Padding(
     padding: const EdgeInsets.all(16.0),
@@ -8,7 +10,7 @@ Widget viewOneDetails(post) {
       children: [
         Image.network(post.image?.large ?? '',
             errorBuilder: (context, error, stackTrace) {
-          return Image.asset('assets/placeholder.png');
+          return Image.asset(Config.placeholder);
         }),
         const SizedBox(height: 10),
         Text(post.title ?? '',

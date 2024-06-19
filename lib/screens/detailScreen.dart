@@ -1,9 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterelegantmedia/utils/next_Screen.dart';
 
 import '../controller/apiCallController.dart';
 import '../model/lisViewModel.dart';
+import '../utils/colors.dart';
+import '../utils/config.dart';
 import '../view/viewOneDetails.dart';
 import 'mapScreen.dart';
 
@@ -16,7 +17,15 @@ class DetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Post Details'),
+        title: const Text(Config.details),
+        centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        backgroundColor: appColor,
         actions: [
           IconButton(
             onPressed: () async {
@@ -30,7 +39,7 @@ class DetailScreen extends StatelessWidget {
                     address: post.address!,
                   ));
             },
-            icon: Icon(CupertinoIcons.location),
+            icon: Image.asset(Config.locationMark),
           ),
         ],
       ),

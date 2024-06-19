@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../utils/colors.dart';
 import '../utils/config.dart';
 
 class MapScreen extends StatefulWidget {
@@ -35,7 +36,15 @@ class _MapScreenState extends State<MapScreen> {
         _getStaticMapUrl(widget.latitude, widget.longitude);
     return Scaffold(
       appBar: AppBar(
-        title: Text(Config.map),
+        title: const Text(Config.map),
+        centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        backgroundColor: appColor,
       ),
       body: Stack(
         children: [

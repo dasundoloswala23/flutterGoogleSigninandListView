@@ -5,6 +5,7 @@ import 'package:flutterelegantmedia/utils/config.dart';
 import '../controller/apiCallController.dart';
 import '../controller/signOutFromGoogle.dart';
 import '../model/lisViewModel.dart';
+import '../utils/colors.dart';
 import '../utils/next_Screen.dart';
 import '../view/listView.dart';
 import 'loginScreen.dart';
@@ -17,17 +18,23 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(Config.app_title)),
+      appBar: AppBar(
+        title: const Text(Config.app_title),
+        centerTitle: true,
+        backgroundColor: appColor,
+        automaticallyImplyLeading: false,
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
               child: Column(
             children: [
+              const SizedBox(height: 30),
               Text(user.displayName ?? Config.noNameAvailable),
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
               Text(user.email ?? Config.noEmailAvailable),
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
               ElevatedButton(
                 onPressed: () async {
                   bool result = await signOutFromGoogle();
@@ -35,8 +42,21 @@ class HomeScreen extends StatelessWidget {
                     nextScreen(context, LoginScreen());
                   }
                 },
-                child: const Text(Config.logout),
-              ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: appColor, // Button color
+                  padding: EdgeInsets.symmetric(
+                      horizontal: 50, vertical: 10), // Button size
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5), // Rounded edges
+                  ),
+                ),
+                child: Text(
+                  Config.logout,
+                  style:
+                      TextStyle(fontSize: 18, color: Colors.white // Text size
+                          ),
+                ),
+              )
             ],
           )),
           Expanded(
