@@ -1,7 +1,5 @@
 # Flutter Elegant media Assessment
 
-
-
 ## How Run the application
 
 Unzip the zip file and open in ide android studio or vs code in terminal run 'flutter pub get'
