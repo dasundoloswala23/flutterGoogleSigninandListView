@@ -3,10 +3,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+import '../utils/config.dart';
+import '../utils/next_Screen.dart';
 import 'homscreen.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -18,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Login Screen')),
+      appBar: AppBar(title: const Text(Config.login_title)),
       body: Center(
         child: isLoading
             ? const CircularProgressIndicator()
@@ -43,11 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         isLoading = false;
                       });
                       if (user != null) {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => HomeScreen(user: user)),
-                        );
+                        nextScreen(context, HomeScreen(user: user));
                       }
                     },
                   ),
