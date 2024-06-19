@@ -23,8 +23,11 @@ class DetailScreen extends StatelessWidget {
               nextScreen(
                   context,
                   MapScreen(
-                      latitude: double.parse(post.latitude!),
-                      longitude: double.parse(post.longitude!)));
+                    latitude: double.parse(post.latitude!),
+                    longitude: double.parse(post.longitude!),
+                    title: post.title!,
+                    address: post.address!,
+                  ));
             },
             icon: Icon(CupertinoIcons.location),
           ),
