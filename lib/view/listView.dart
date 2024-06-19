@@ -5,6 +5,7 @@ import '../model/lisViewModel.dart';
 import '../screens/detailScreen.dart';
 import '../utils/config.dart';
 
+//list view code
 Widget buildPosts(List<Post> posts) {
   return ListView.builder(
     itemCount: posts.length,
@@ -26,7 +27,8 @@ Widget buildPosts(List<Post> posts) {
                 flex: 1,
                 child: Image.network(post.image?.large ?? '',
                     errorBuilder: (context, error, stackTrace) {
-                  return Image.asset(Config.placeholder);
+                  return Image.asset(Config
+                      .placeholder); //if error on image url show placeholder image
                 }),
               ),
               SizedBox(width: 10),

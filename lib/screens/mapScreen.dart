@@ -63,7 +63,7 @@ class _MapScreenState extends State<MapScreen> {
               ),
             ),
           ),
-          // Info box that appears on top of the marker when clicked
+          // details box that appears on top of the marker when clicked
           if (_isInfoVisible)
             Positioned(
               bottom: MediaQuery.of(context).size.height / 2,
@@ -97,8 +97,8 @@ class _MapScreenState extends State<MapScreen> {
 
   String _getStaticMapUrl(double latitude, double longitude) {
     const apiKey =
-        'AIzaSyCSvnqHhGHM0-cGgRetzbw5rzS1G_G9zEo'; // Replace with your Google Static Maps API key
+        'AIzaSyCSvnqHhGHM0-cGgRetzbw5rzS1G_G9zEo'; //  Google  Maps API key
     return 'https://maps.googleapis.com/maps/api/staticmap?center=$latitude,$longitude&zoom=14&size=600x300&maptype=roadmap'
-        '&markers=color:red%7Clabel:%7C$latitude,$longitude&key=$apiKey';
+        '&markers=color:red%7Clabel:%7C$latitude,$longitude&key=$apiKey'; //  Google  Maps location set
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 import '../utils/config.dart';
 
+//view one data code
 Widget viewOneDetails(post) {
   return Padding(
     padding: const EdgeInsets.all(16.0),
