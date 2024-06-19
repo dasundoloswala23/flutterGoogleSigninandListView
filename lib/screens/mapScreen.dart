@@ -37,16 +37,6 @@ class _MapScreenState extends State<MapScreen> {
       ),
       body: Stack(
         children: [
-          Positioned(
-            top: 20,
-            left: 10,
-            child: IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.white),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ),
           // Placeholder for the marker
           Positioned.fill(
             child: GestureDetector(
@@ -95,8 +85,7 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   String _getStaticMapUrl(double latitude, double longitude) {
-    const apiKey =
-        'AIzaSyBVoFRhTt2BqLsgnHfzNLlVxPPEblyCYdk'; // Replace with your Google Static Maps API key
+    const apiKey = ''; // Replace with your Google Static Maps API key
     return 'https://maps.googleapis.com/maps/api/staticmap?center=$latitude,$longitude&zoom=14&size=600x300&maptype=roadmap'
         '&markers=color:red%7Clabel:%7C$latitude,$longitude&key=$apiKey';
   }
