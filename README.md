@@ -1,16 +1,23 @@
-# flutterelegantmedia
+# Flutter Elegant media Assessment
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## How Run the application
 
-A few resources to get you started if this is your first Flutter project:
+Unzip the zip file and open in ide android studio or vs code in terminal run 'flutter pub get'
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Improvements
+  * Used MVC Architecture 
+  * Used reusable widget
+  * Texts,colors,images declare in separate file
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Other Source,
+* How to Generate SHA1 Key in Android Studio
+- [SHA1 Key](https://youtu.be/WJm63i0jj0c)
+* Google Signing
+- [Google Signing](https://firebase.flutter.dev/docs/auth/social/)
+* List view
+- [List view](https://stackoverflow.com/questions/73864080/how-to-fetch-data-from-rest-api-and-display-on-listview-flutter)
+- [List view](https://medium.com/@ashishpimpre/how-to-fetch-data-from-an-api-and-display-it-in-listview-in-flutter-770863f85959)
+
