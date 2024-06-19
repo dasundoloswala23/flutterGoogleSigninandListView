@@ -4,4 +4,5 @@ class Config {
   static const noNameAvailable = "No Name Available";
   static const noEmailAvailable = "No Email Available";
   static const logout = "Logout";
+  static const map = "Map";
 }

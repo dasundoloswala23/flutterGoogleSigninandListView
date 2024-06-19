@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/config.dart';
+
 class MapScreen extends StatefulWidget {
   final double latitude;
   final double longitude;
@@ -33,7 +35,7 @@ class _MapScreenState extends State<MapScreen> {
         _getStaticMapUrl(widget.latitude, widget.longitude);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Map'),
+        title: Text(Config.map),
       ),
       body: Stack(
         children: [
@@ -85,7 +87,8 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   String _getStaticMapUrl(double latitude, double longitude) {
-    const apiKey = 'AIzaSyCSvnqHhGHM0-cGgRetzbw5rzS1G_G9zEo'; // Replace with your Google Static Maps API key
+    const apiKey =
+        'AIzaSyCSvnqHhGHM0-cGgRetzbw5rzS1G_G9zEo'; // Replace with your Google Static Maps API key
     return 'https://maps.googleapis.com/maps/api/staticmap?center=$latitude,$longitude&zoom=14&size=600x300&maptype=roadmap'
         '&markers=color:red%7Clabel:%7C$latitude,$longitude&key=$apiKey';
   }
