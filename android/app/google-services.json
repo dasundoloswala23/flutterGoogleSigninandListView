@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "28621946941",
+    "project_id": "flutterelegantmedia",
+    "storage_bucket": "flutterelegantmedia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28621946941:android:61b0021c059d5e3d7dea54",
+        "android_client_info": {
+          "package_name": "com.flutter.flutterelegantmedia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1Xyx3IriLVW2ojFo8dJa2ex_B0EI4syk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
