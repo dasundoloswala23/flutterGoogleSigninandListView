@@ -2,7 +2,7 @@
 
 ## How Run the application
 
-Unzip the zip file and open in ide android studio or vs code in terminal run 'flutter pub get'
+Unzip the zip file and open it in your IDE (Android Studio or VS Code). In the terminal, run 'flutter pub get'
 
 ## Improvements
   * Used MVC Architecture 
