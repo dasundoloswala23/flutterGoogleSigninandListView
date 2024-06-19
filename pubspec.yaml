@@ -21,14 +21,9 @@ dependencies:
   cloud_firestore: ^4.9.1
   cloud_functions: ^4.7.2
   firebase_core: ^2.15.1
-
   google_sign_in: ^6.2.1
-
-
   connectivity_plus: ^6.0.3
   http: ^1.2.1
-
-
   google_maps_flutter: ^2.7.0
   hexcolor: ^3.0.1
 
