@@ -21,7 +21,13 @@ Widget buildPosts(List<Post> posts) {
           width: double.maxFinite,
           child: Row(
             children: [
-              Expanded(flex: 1, child: Image.network(post.image?.medium ?? '')),
+              Expanded(
+                flex: 1,
+                child: Image.network(post.image?.large ?? '',
+                    errorBuilder: (context, error, stackTrace) {
+                  return Image.asset('assets/placeholder.png');
+                }),
+              ),
               SizedBox(width: 10),
               Expanded(
                   flex: 3,
